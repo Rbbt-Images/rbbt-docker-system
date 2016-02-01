@@ -2,7 +2,7 @@
 
 echo "RUNNING PROVISION"
 echo
-echo "CMD: ../rbbt-image/bin/build_rbbt_provision_sh.rb -sg -su -sb"
+echo "CMD: build_rbbt_provision_sh.rb -sg -su -sb"
 
 echo "1. Provisioning base system"
 #!/bin/bash -x
@@ -40,9 +40,9 @@ echo "2. Setting up ruby"
 # ============
 
 cd /tmp
-wget http://ftp.ruby-lang.org/pub/ruby/2.1/ruby-2.1.5.tar.gz 
-tar -xvzf ruby-2.1.5.tar.gz
-cd ruby-2.1.5/
+wget https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.0.tar.gz
+tar -xvzf ruby-2.3.0.tar.gz
+cd ruby-2.3.0/
 ./configure --prefix=/usr/local
 make && make install
 
