@@ -2,10 +2,9 @@
 
 echo "RUNNING PROVISION"
 echo
-echo "CMD: git/rbbt-image/bin/build_rbbt_provision_sh.rb -sg -su -sb"
+echo "CMD: ../rbbt-image/bin/build_rbbt_provision_sh.rb -sg -su -sb"
 
 echo "1. Provisioning base system"
-echo
 #!/bin/bash -x
 
 # INSTALL
@@ -35,7 +34,6 @@ ln -s /usr/lib/R/site-library/Rserve/libs/Rserve /usr/lib/R/bin/Rserve
 
 
 echo "2. Setting up ruby"
-echo
 #!/bin/bash -x
 
 # RUBY INSTALL
@@ -54,16 +52,17 @@ grep "#Ruby2" /etc/profile || echo 'export PATH="/usr/local/bin:$PATH" #Ruby2' >
 
 
 echo "3. Setting up gems"
-echo
 echo SKIPPED
+echo
 
 echo "4. Configuring user"
-echo
 echo SKIPPED
+echo
 
 echo "5. Bootstrapping workflows as 'rbbt'"
 echo
 echo SKIPPED
+echo
 
 # CODA
 # ====
