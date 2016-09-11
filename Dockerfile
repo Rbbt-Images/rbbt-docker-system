@@ -21,4 +21,4 @@ RUN echo "install.packages(c('NMF'), repos='http://cran.us.r-project.org')" | R 
 RUN rm /tmp/*.gz
 RUN gem install prawn prawn-svg
 RUN echo "install.packages(c('Cairo','drc', 'Rserve'), repos='http://cran.us.r-project.org')" | R --vanilla
-RUN echo "source("https://bioconductor.org/biocLite.R"); biocLite("limma")" | R --vanilla
+RUN echo "source('https://bioconductor.org/biocLite.R'); biocLite('limma')" | R --vanilla
