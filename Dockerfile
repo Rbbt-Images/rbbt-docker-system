@@ -3,8 +3,6 @@ ADD provision.sh /tmp/provision.sh
 RUN chmod +x /tmp/provision.sh
 RUN /bin/bash /tmp/provision.sh
 USER root
-RUN apt-get update
-RUN apt-get -y install libcairo2 libcairo2-dev
 RUN echo "install.packages(c('Rcpp','RJSONIO','XML'), repos='http://cran.us.r-project.org')" | R --vanilla
 RUN wget 'https://cran.r-project.org/src/contrib/Archive/plyr/plyr_1.8.1.tar.gz' -O /tmp/plyr_1.8.1.tar.gz
 RUN R CMD INSTALL /tmp/plyr_1.8.1.tar.gz
@@ -15,10 +13,9 @@ RUN wget 'https://cran.r-project.org/src/contrib/Archive/ggplot2/ggplot2_1.0.0.t
 RUN R CMD INSTALL /tmp/ggplot2_1.0.0.tar.gz
 RUN wget 'https://cran.r-project.org/src/contrib/Archive/ggthemes/ggthemes_1.7.0.tar.gz' -O /tmp/ggthemes_1.7.0.tar.gz
 RUN R CMD INSTALL /tmp/ggthemes_1.7.0.tar.gz
-RUN wget 'https://cran.r-project.org/src/contrib/Archive/gridSVG/gridSVG_1.3-1.tar.gz' -O /tmp/gridSVG_1.3-1.tar.gz
-RUN R CMD INSTALL /tmp/gridSVG_1.3-1.tar.gz
+RUN wget 'https://cran.r-project.org/src/contrib/gridSVG_1.5-0.tar.gz' -O /tmp/gridSVG_1.5-0.tar.gz
+RUN R CMD INSTALL /tmp/gridSVG_1.5-0.tar.gz
 RUN echo "install.packages(c('NMF'), repos='http://cran.us.r-project.org')" | R --vanilla
-RUN rm /tmp/*.gz
-RUN gem install prawn prawn-svg
 RUN echo "install.packages(c('Cairo','drc', 'Rserve'), repos='http://cran.us.r-project.org')" | R --vanilla
 RUN echo "source('http://bioconductor.org/biocLite.R'); biocLite('limma')" | R --vanilla
+RUN rm /tmp/*.gz
