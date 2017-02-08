@@ -47,7 +47,8 @@ cd R-3.3.2/
 make && make install
 
 grep -v R_HOME /etc/profile > profile.tmp
-echo "\n# For RSRuby gem " >> profile.tmp
+echo >> profile.tmp
+echo "# For RSRuby gem " >> profile.tmp
 echo "export R_HOME='/usr/local/lib/R'" >> profile.tmp
 mv profile.tmp /etc/profile
 . /etc/profile
