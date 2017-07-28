@@ -13,8 +13,10 @@ RUN wget 'https://cran.r-project.org/src/contrib/Archive/ggplot2/ggplot2_1.0.0.t
 RUN R CMD INSTALL /tmp/ggplot2_1.0.0.tar.gz
 RUN wget 'https://cran.r-project.org/src/contrib/Archive/ggthemes/ggthemes_1.7.0.tar.gz' -O /tmp/ggthemes_1.7.0.tar.gz
 RUN R CMD INSTALL /tmp/ggthemes_1.7.0.tar.gz
-RUN wget 'https://cran.r-project.org/src/contrib/gridSVG_1.5-0.tar.gz' -O /tmp/gridSVG_1.5-0.tar.gz
-RUN R CMD INSTALL /tmp/gridSVG_1.5-0.tar.gz
+RUN wget 'https://cran.r-project.org/src/contrib/jsonlite_1.5.tar.gz' -O /tmp/jsonlite_1.5.tar.gz
+RUN R CMD INSTALL /tmp/jsonlite_1.5.tar.gz
+RUN wget 'https://cran.r-project.org/src/contrib/gridSVG_1.5-1.tar.gz' -O /tmp/gridSVG_1.5-1.tar.gz
+RUN R CMD INSTALL /tmp/gridSVG_1.5-1.tar.gz
 RUN echo "install.packages(c('NMF'), repos='http://cran.us.r-project.org')" | R --vanilla
 RUN echo "install.packages(c('Cairo','drc', 'Rserve'), repos='http://cran.us.r-project.org')" | R --vanilla
 RUN echo "source('http://bioconductor.org/biocLite.R'); biocLite('limma')" | R --vanilla
