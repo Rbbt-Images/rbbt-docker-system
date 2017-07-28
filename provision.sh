@@ -16,7 +16,6 @@ echo "1. Provisioning base system"
 # Basic system requirements
 # -------------------------
 apt-get -y update
-apt-get -y update
 apt-get -y install \
   bison autoconf g++ libxslt1-dev make \
   zlib1g-dev libbz2-dev libreadline6 libreadline6-dev \
